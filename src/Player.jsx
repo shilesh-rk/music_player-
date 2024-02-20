@@ -31,8 +31,9 @@ const MusicPlayer = () => {
 			// For Error checking
 			const trackError = audioFile.play();
 			if (trackError !== undefined) {
-				trackError.catch((error) =>
+				trackError.catch((error) =>{
 					console.error("Error playing audio:", error)
+				localStorage.removeItem("playlist")}
 				);
 			}
 
